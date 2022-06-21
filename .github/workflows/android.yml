@@ -30,8 +30,10 @@ jobs:
       run: sudo ln -fs /bin/bash /bin/sh
     - name: Build
       run: ./platforms/android/aps-sdk/build-publish-airplay-sdk.sh
+    - name: Copy file
+      run: cp ./platforms/android/aps-sdk/airplay/build/outputs/aar/* ./output
     - name: Uploading
       uses: actions/upload-artifact@v1
       with:
         name: release_Android # 生成的压缩包名称
-        path: /output # 需要打包的路径
+        path: output # 需要打包的路径
