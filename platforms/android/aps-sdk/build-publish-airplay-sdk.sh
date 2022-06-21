@@ -21,10 +21,5 @@ else
     ./gradlew clean :airplay:build
 fi
 
-popd
-if [ $? = 0 ]; then 
-    cp ./airplay/build/outputs/aar/* /output
-fi
-
 echo Build done with error code $?
 exit $?
