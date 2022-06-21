@@ -27,6 +27,6 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x ./platforms/android/aps-sdk/gradlew
     - name: sudo ln -fs /bin/bash /bin/sh
-      run: ln -fs /bin/bash /bin/sh
+      run: sudo ln -fs /bin/bash /bin/sh
     - name: Build
       run: ./platforms/android/aps-sdk/build-publish-airplay-sdk.sh
