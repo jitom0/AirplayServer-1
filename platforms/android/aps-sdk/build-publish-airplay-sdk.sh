@@ -23,7 +23,7 @@ fi
 
 popd
 if [ $? = 0 ]; then 
-    cp platforms/android/aps-sdk/airplay/build/outputs/aar/* bin
+    cp ./airplay/build/outputs/aar/* /output
 fi
 
 echo Build done with error code $?
